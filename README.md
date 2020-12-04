@@ -11,6 +11,6 @@ It was written in JS with Node.js
 
 ## Questions:
 
-For questions electronically mail me at: nathan.larson0000@gmail.com\n
-My GitHub is [GitHub](https://github.com/ironicminer)\n
-GitHub [Repository](https://github.com/ironicminer/Readme-generator)\n
+-For questions electronically mail me at: nathan.larson0000@gmail.com\
+-My [GitHub](https://github.com/ironicminer)\
+-GitHub [Repository](https://github.com/ironicminer/Readme-generator)
