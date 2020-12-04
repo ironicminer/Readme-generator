@@ -4,7 +4,7 @@
 
 ## Description:
 
-This is a node.js application that runs in the command line.\n
+This is a node.js application that runs in the command line.\
 It was written in JS with Node.js
 
 ## Example
