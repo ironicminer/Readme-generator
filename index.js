@@ -1,5 +1,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const template = require("./template");
+const util = require("util");
+const getLicense = require("./grabLicense");
+const writeNewFile = util.promisify(fs.writeFile);
 
 const userQuestions = () =>
   inquirer.prompt([
@@ -24,33 +28,47 @@ const userQuestions = () =>
       name: "usage",
     },
     {
-      type: "",
-      message: "",
-      name: "",
+      type: "input",
+      message: "Any Contributors to the project?",
+      name: "contribution",
     },
     {
-      type: "",
-      message: "",
-      name: "",
+      type: "input",
+      message: "Testing information?",
+      name: "test",
     },
     {
-      type: "",
-      message: "",
-      name: "",
+      type: "checkbox",
+      message: "Choose a license",
+      choices: ["Apache", "MIT", "ISC"],
+      name: "license",
     },
     {
-      type: "",
-      message: "",
-      name: "",
+      type: "input",
+      message: "Who gets credit on the project?",
+      name: "credit",
     },
     {
-      type: "",
-      message: "",
-      name: "",
+      type: "input",
+      message: "What is your email?",
+      name: "email",
     },
     {
-      type: "",
-      message: "",
-      name: "",
+      type: "input",
+      message: "What is your Github username?",
+      name: "username",
+    },
+    {
+      type: "input",
+      message: "what is the name of the repository?",
+      name: "repo",
     },
   ]);
+
+userQuestions()
+  .then((answers) => {
+    const newLicense = getLicense(answers);
+    return writeNewFile("NEWREADME.md", template(answers, newLicense));
+  })
+  .then(() => console.log("New README.md Created!"))
+  .catch((err) => console.log(err));
