@@ -9,7 +9,7 @@ It was written in JS with Node.js
 
 ## Example
 
-[Clickme](https://ironicminer.github.io/Readme-generator/))
+[Clickme](https://ironicminer.github.io/Readme-generator/)
 
 ## Questions:
 
