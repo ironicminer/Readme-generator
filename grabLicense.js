@@ -1,5 +1,5 @@
 function grabLicense(answers) {
-  if (answers.license[0]) {
+  if (answers.license === "Apache") {
     return `Apache License 
         Version 2.0, January 2004
         http://www.apache.org/licenses/
@@ -170,7 +170,7 @@ function grabLicense(answers) {
         See the License for the specific language governing permissions and
         limitations under the License.
         `;
-  } else if (answers.license[1]) {
+  } else if (answers.license === "MIT") {
     return `MIT License 
         Copyright (c) [2020][Nathan Larson]
         Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -191,7 +191,7 @@ function grabLicense(answers) {
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
         `;
-  } else if (answers.license[2]) {
+  } else if (answers.license === "ISC") {
     return `ISC License 
         Copyright (c) [2020][Nathan Larson]
 

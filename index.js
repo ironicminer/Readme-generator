@@ -38,7 +38,7 @@ const userQuestions = () =>
       name: "test",
     },
     {
-      type: "checkbox",
+      type: "list",
       message: "Choose a license",
       choices: ["Apache", "MIT", "ISC"],
       name: "license",
